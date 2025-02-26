@@ -68,7 +68,7 @@
     <h1>LA TUA FORTUNA OGGI</h1>
     <h2>PROVA A VINCERE COUPON ESCLUSIVI DEI MIGLIORI SUPERMERCATI</h2>
 
-    <form onsubmit="redirectToSuccess(event)">
+    <form onsubmit="return verificaConsenso(event)">
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
 
@@ -90,16 +90,16 @@
         <input type="date" id="data_nascita" name="data_nascita">
 
         <label>
-            <input type="checkbox" name="iscrizione_newsletter" value="si">
-            Preso atto della <a href="https://www.latuafortunaoggi.it/seconda_pagina.html" target="_blank">Privacy Policy</a> , accetto di iscrivermi alla Newsletter del sito LaTuaFortunaOggi e di ricevere aggiornamenti sui migliori articoli della settimana.
+            <input type="checkbox" id="consenso" name="iscrizione_newsletter" value="si" required>
+            Preso atto della <a href="https://www.latuafortunaoggi.it/seconda_pagina.html" target="_blank">Privacy Policy</a>, accetto di iscrivermi alla Newsletter del sito LaTuaFortunaOggi e di ricevere aggiornamenti sui migliori articoli della settimana.
         </label>
 
         <label>
-    <input type="checkbox" name="promozioni_LaTuaFortunaOggi" value="si">
-    Dichiaro di aver preso visione della 
-    <a href="https://www.latuafortunaoggi.it/seconda_pagina.html" target="_blank">Privacy Policy</a> 
-    e acconsento a ricevere da LaTuaFortunaOggi comunicazioni promozionali su prodotti e servizi offerti da terze parti selezionate.
-</label>
+            <input type="checkbox" name="promozioni_LaTuaFortunaOggi" value="si">
+            Dichiaro di aver preso visione della 
+            <a href="https://www.latuafortunaoggi.it/seconda_pagina.html" target="_blank">Privacy Policy</a> 
+            e acconsento a ricevere da LaTuaFortunaOggi comunicazioni promozionali su prodotti e servizi offerti da terze parti selezionate.
+        </label>
 
         <label>
             <input type="checkbox" name="dati_a_terzi" value="si">
@@ -111,9 +111,14 @@
 </div>
 
 <script>
-    function redirectToSuccess(event) {
-        event.preventDefault(); // Evita il comportamento predefinito del form
+    function verificaConsenso(event) {
+        let checkbox = document.getElementById("consenso");
+        if (!checkbox.checked) {
+            alert("Devi accettare la Privacy Policy per proseguire.");
+            return false;
+        }
         window.location.href = "success.html"; // Reindirizza alla pagina di successo
+        return true;
     }
 </script>
 </body>
