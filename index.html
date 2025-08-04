@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VOTRE CHANCE AUJOURD'HUI</title>
+    <title>LA TUA FORTUNA DI OGGI</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -68,59 +68,57 @@
 </head>
 <body>
 <nav style="background-color: #333; padding: 10px; text-align: center;">
-    <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px;">Accueil</a>
-    <a href="seconda_pagina.html" style="color: white; text-decoration: none; margin: 0 15px;">Politique de Confidentialité</a>
+    <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px;">Home</a>
+    <a href="seconda_pagina.html" style="color: white; text-decoration: none; margin: 0 15px;">Informativa sulla Privacy</a>
 </nav>
 
 <div class="container">
-    <h1>VOTRE CHANCE AUJOURD'HUI</h1>
-    <h2>TENTEZ DE GAGNER DES BONS EXCLUSIFS DES MEILLEURS SUPERMARCHÉS</h2>
+    <h1>LA TUA FORTUNA DI OGGI</h1>
+    <h2>PROVA A VINCERE BUONI ESCLUSIVI DEI MIGLIORI SUPERMERCATI</h2>
 
     <form onsubmit="redirectToSuccess(event)">
-        <label for="nome">Prénom</label>
-        <input type="text" id="nome" name="nome" placeholder="Entrez votre prénom" required>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
 
-        <label for="cognome">Nom</label>
-        <input type="text" id="cognome" name="cognome" placeholder="Entrez votre nom" required>
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome" required>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+        <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
 
-        <label for="sesso">Sexe</label>
+        <label for="sesso">Sesso</label>
         <select id="sesso" name="sesso" required>
-            <option value="">Sélectionnez</option>
-            <option value="homme">Homme</option>
-            <option value="femme">Femme</option>
-            <option value="autre">Autre</option>
+            <option value="">Seleziona</option>
+            <option value="uomo">Uomo</option>
+            <option value="donna">Donna</option>
+            <option value="altro">Altro</option>
         </select>
 
-        <label for="data_nascita">Date de naissance</label>
+        <label for="data_nascita">Data di nascita</label>
         <input type="date" id="data_nascita" name="data_nascita">
 
         <label>
-            <input type="checkbox" name="iscrizione_newsletter" value="oui">
-            Après avoir pris connaissance de la <a href="seconda_pagina.html" target="_blank">Politique de Confidentialité</a>, j'accepte de m'abonner à la newsletter du site VotreChanceAujourdHui et de recevoir les meilleures offres de la semaine.
+            <input type="checkbox" name="iscrizione_newsletter" value="sì">
+            Dopo aver letto l’<a href="seconda_pagina.html" target="_blank">Informativa sulla Privacy</a>, accetto di iscrivermi alla newsletter di LaTuaFortunaOggi e ricevere le migliori offerte della settimana.
         </label>
 
         <label>
-            <input type="checkbox" name="promozioni_LaTuaFortunaOggi" value="oui">
-            Je déclare avoir lu la 
-            <a href="seconda_pagina.html" target="_blank">Politique de Confidentialité</a> 
-            et j’accepte de recevoir de VotreChanceAujourdHui des communications promotionnelles concernant des produits et services de tiers sélectionnés.
+            <input type="checkbox" name="promozioni_LaTuaFortunaOggi" value="sì">
+            Dichiaro di aver letto l’<a href="seconda_pagina.html" target="_blank">Informativa sulla Privacy</a> e accetto di ricevere comunicazioni promozionali da LaTuaFortunaOggi riguardanti prodotti e servizi di terze parti selezionate.
         </label>
 
         <label>
-            <input type="checkbox" name="dati_a_terzi" value="oui">
-            J'accepte que mes données personnelles soient partagées avec des tiers qui pourront m'envoyer des offres promotionnelles par email.
+            <input type="checkbox" name="dati_a_terzi" value="sì">
+            Acconsento alla condivisione dei miei dati personali con terze parti che potranno inviarmi offerte promozionali via email.
         </label>
 
-        <button type="submit">Inscrivez-vous maintenant</button>
+        <button type="submit">Iscriviti ora</button>
     </form>
 
     <p class="reglement-link">
-        En participant, vous acceptez les 
+        Partecipando accetti i  
         <a href="reglement_votre_chance_aujourdhui.pdf" target="_blank">
-            conditions du règlement de la promotion "Votre Chance Aujourd'hui"
+            termini del regolamento della promozione "La Tua Fortuna di Oggi"
         </a>.
     </p>
 </div>
